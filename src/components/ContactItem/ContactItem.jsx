@@ -1,28 +1,24 @@
-import { Component } from "react";
 import { IoIosClose } from "react-icons/io";
 import css from './ContactItem.module.css';
 
-export class ContactItem extends Component{
+export const ContactItem = ({id, name, number, onDelContact}) => {
 
-    onClickHandle = ({currentTarget}) => {
-        this.props.onDelContact(currentTarget.id);
+    const onClickHandle = ({currentTarget}) => {
+        onDelContact(currentTarget.id);
     }
 
-    render(){
-            const {id, name, number} = this.props;
+    return  <li className={css["contact-li"]}>
 
-            return  <li className={css["contact-li"]}>
+                <div className={css["contact-div"]}>
 
-                        <div className={css["contact-div"]}>
+                    <p className={css["contact-name"]}>{name}</p>
+                    <p className={css["contact-number"]}>{number}</p>
+                </div>
 
-                            <p className={css["contact-name"]}>{name}</p>
-                            <p className={css["contact-number"]}>{number}</p>
-                        </div>
+                <button className={css["contact-del-btn"]} id={id} type="button" onClick={onClickHandle}>
+                    <IoIosClose className={css["contact-del-icon"]}/> 
+                </button>
 
-                        <button className={css["contact-del-btn"]} id={id} type="button" onClick={this.onClickHandle}>
-                            <IoIosClose className={css["contact-del-icon"]}/> 
-                        </button>
+            </li>
 
-                    </li>
-    }
 }
