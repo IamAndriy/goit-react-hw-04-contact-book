@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-04-contact-book/static/css/main.f05a66a5.css",
+    "main.js": "/goit-react-hw-04-contact-book/static/js/main.7d4b598a.js",
+    "index.html": "/goit-react-hw-04-contact-book/index.html",
+    "main.f05a66a5.css.map": "/goit-react-hw-04-contact-book/static/css/main.f05a66a5.css.map",
+    "main.7d4b598a.js.map": "/goit-react-hw-04-contact-book/static/js/main.7d4b598a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f05a66a5.css",
+    "static/js/main.7d4b598a.js"
+  ]
+}
