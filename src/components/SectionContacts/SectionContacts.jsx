@@ -1,6 +1,7 @@
 import {Filter} from "../Filter/Filter";
 import {ContactList} from "../ContactList/ContactList";
 import css from "./SectionContacts.module.css";
+import PropTypes from "prop-types";
 
 export const SectionContacts = ({contacts, filter, onChange, onDelContact}) => {
 
@@ -16,4 +17,11 @@ export const SectionContacts = ({contacts, filter, onChange, onDelContact}) => {
                             : <p className={css.massage}>There are no contacts in the phone book yet</p>
                 }
             </section>
+}
+
+SectionContacts.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.object),
+    filter: PropTypes.string,
+    onChange: PropTypes.func,
+    onDelContact: PropTypes.func,
 }

@@ -1,6 +1,7 @@
 import css from "./ContactList.module.css";
 import {ContactItem} from "../ContactItem/ContactItem";
 import { nanoid } from "nanoid";
+import PropTypes from "prop-types";
 
 export const ContactList = ({contacts, onDelContact }) => {
 
@@ -14,6 +15,9 @@ export const ContactList = ({contacts, onDelContact }) => {
                             )
                 }
             </ul>
-            
+}
 
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.object),
+    onDelContact: PropTypes.func,
 }

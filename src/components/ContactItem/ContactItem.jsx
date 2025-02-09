@@ -1,5 +1,6 @@
 import { IoIosClose } from "react-icons/io";
 import css from './ContactItem.module.css';
+import PropTypes from "prop-types";
 
 export const ContactItem = ({id, name, number, onDelContact}) => {
 
@@ -21,4 +22,11 @@ export const ContactItem = ({id, name, number, onDelContact}) => {
 
             </li>
 
+}
+
+ContactItem.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    number: PropTypes.string,
+    onDelContact: PropTypes.func,
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import css from "./SectionContactForm.module.css";
+import PropTypes from "prop-types";
 
 export const SectionContactForm = ({onAdd}) => {
 
@@ -69,4 +70,8 @@ export const SectionContactForm = ({onAdd}) => {
                 </form>
             </section>
                 
+}
+
+SectionContactForm.propTypes = {
+    onAdd: PropTypes.func,
 }
